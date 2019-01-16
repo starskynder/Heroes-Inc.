@@ -1,0 +1,30 @@
+.heading-primary {
+  text-transform: uppercase;
+  font-family: "PT Mono", monospace;
+  color: #fff;
+  backface-visibility: hidden;
+  animation: moveInLeft 1s ease-out;
+  font-size: 3.5rem;
+
+  &--sub {
+    border-left: 2px solid $color-tertiary;
+    padding: 0.5rem;
+    animation: moveInRight 1s ease-out;
+    transition: all 0.2s;
+    font-size: 2rem;
+
+    &:hover {
+      padding-left: 1rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &:visited,
+    &:focus,
+    &:hover {
+      color: $color-tertiary;
+    }
+  }
+}
