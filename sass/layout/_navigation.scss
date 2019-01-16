@@ -1,0 +1,82 @@
+.navigation {
+  @include flex-row;
+
+  font-size: 2rem;
+  padding: 1rem;
+
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__menu {
+    position: relative;
+    margin: auto 1rem;
+  }
+
+  &__img {
+    width: 5.5rem;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__icon {
+    position: relative;
+
+    &,
+    &::before,
+    &::after {
+      width: 4rem;
+      display: inline-block;
+      height: 0.5rem;
+      border-radius: 10px;
+      background-color: $color-tertiary;
+      transition: all 0.2s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      background-color: $color-primary;
+      top: -1rem;
+    }
+
+    &::after {
+      background-color: $color-secondary;
+      top: 1rem;
+    }
+  }
+
+  &__checkbox:checked + &__btn &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__btn &__icon::before {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  &__checkbox:checked + &__btn &__icon::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__nav {
+    @include flex-col;
+
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    left: -100%;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
