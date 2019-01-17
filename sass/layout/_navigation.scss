@@ -3,12 +3,13 @@
 
   font-size: 2rem;
   padding: 1rem;
+  position: relative;
 
   &__logo {
     margin-right: auto;
   }
 
-  &__menu {
+  &__btn {
     position: relative;
     margin: auto 1rem;
   }
@@ -67,16 +68,55 @@
     transform: rotate(135deg);
   }
 
-  &__nav {
-    @include flex-col;
-
-    list-style-type: none;
+  nav {
     position: absolute;
     top: 0;
     left: -100%;
+    transition: all 0.2s;
+    z-index: 10;
+    width: 80vw;
+    height: 100vh;
   }
 
+  &__nav {
+    @include flex-col;
+
+    font-size: 3rem;
+    list-style-type: none;
+
+    justify-content: center;
+    transition: all 0.3s;
+
+    width: 80vw;
+    height: 100vh;
+    background-image: linear-gradient(
+      to bottom,
+      $color-primary 0 33%,
+      $color-tertiary 33% 66%,
+      $color-secondary 66% 100%
+    );
+  }
+  &__checkbox:checked ~ nav {
+    left: 0;
+  }
+  &__item {
+    text-align: center;
+    padding: 0;
+  }
   &__link {
     text-decoration: none;
+    position: relative;
+    padding: 0.3rem;
+    display: inline-block;
+    transition: all 0.3s;
+    &:link,
+    &:visited {
+      color: $color-secondary;
+    }
+    &:focus,
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-tertiary;
+    }
   }
 }

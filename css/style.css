@@ -58,10 +58,11 @@ img {
   display: flex;
   flex-flow: row nowrap;
   font-size: 2rem;
-  padding: 1rem; }
+  padding: 1rem;
+  position: relative; }
   .navigation__logo {
     margin-right: auto; }
-  .navigation__menu {
+  .navigation__btn {
     position: relative;
     margin: auto 1rem; }
   .navigation__img {
@@ -95,15 +96,40 @@ img {
   .navigation__checkbox:checked + .navigation__btn .navigation__icon::after {
     top: 0;
     transform: rotate(135deg); }
+  .navigation nav {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: all 0.2s;
+    z-index: 10;
+    width: 80vw;
+    height: 100vh; }
   .navigation__nav {
     display: flex;
     flex-flow: column wrap;
+    font-size: 3rem;
     list-style-type: none;
-    position: absolute;
-    top: 0;
-    left: -100%; }
+    justify-content: center;
+    transition: all 0.3s;
+    width: 80vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #f44336 0 33%, #fdd835 33% 66%, #1e88e5 66% 100%); }
+  .navigation__checkbox:checked ~ nav {
+    left: 0; }
+  .navigation__item {
+    text-align: center;
+    padding: 0; }
   .navigation__link {
-    text-decoration: none; }
+    text-decoration: none;
+    position: relative;
+    padding: 0.3rem;
+    display: inline-block;
+    transition: all 0.3s; }
+    .navigation__link:link, .navigation__link:visited {
+      color: #1e88e5; }
+    .navigation__link:focus, .navigation__link:hover {
+      background-color: #1e88e5;
+      color: #fdd835; }
 
 .header {
   height: 80vh;
