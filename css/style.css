@@ -51,8 +51,63 @@ img {
       padding-left: 1rem; }
   .heading-primary__link {
     text-decoration: none; }
-    .heading-primary__link:visited, .heading-primary__link:focus, .heading-primary__link:hover {
+    .heading-primary__link:link, .heading-primary__link:visited, .heading-primary__link:focus, .heading-primary__link:hover {
       color: #fdd835; }
+
+.heading-secondary {
+  text-transform: uppercase;
+  font-family: "PT Mono", monospace;
+  font-size: 2.5rem;
+  color: #1e88e5;
+  padding: 0.3rem 0;
+  position: relative;
+  margin-bottom: 1.5rem; }
+  .heading-secondary::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+    border-radius: 5px;
+    width: 30%;
+    height: 3px;
+    background-color: #1e88e5; }
+
+.heading-tertiary {
+  font-family: "PT Mono", monospace;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: inherit;
+  margin: 1rem; }
+
+.paragraph {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 2rem 0;
+  font-size: 2rem; }
+  .paragraph--accent {
+    font-weight: 600;
+    color: #1e88e5; }
+
+.learn-more {
+  border: 2px solid #fff;
+  color: inherit;
+  border-bottom: 1px solid inherit;
+  font-size: 2rem;
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 5px;
+  font-family: inherit;
+  display: block;
+  margin: 2rem;
+  transition: all 0.2s; }
+  .learn-more--dark {
+    border-color: #000;
+    color: #000; }
+  .learn-more:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    font-weight: 400; }
 
 .navigation {
   display: flex;
@@ -126,7 +181,7 @@ img {
     display: inline-block;
     transition: all 0.3s; }
     .navigation__link:link, .navigation__link:visited {
-      color: #1e88e5; }
+      color: #000; }
     .navigation__link:focus, .navigation__link:hover {
       background-color: #1e88e5;
       color: #fdd835; }
@@ -141,3 +196,26 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+
+.about {
+  padding: 9rem 2rem; }
+
+.features {
+  background-color: #ba160a; }
+  .features__box {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem 2rem;
+    color: #fff; }
+    .features__box--tertiary {
+      background-color: #fdd835;
+      color: #000; }
+    .features__box--secondary {
+      background-color: #10538d; }
+  .features__img {
+    width: 100px;
+    display: block;
+    text-align: center;
+    margin: 2rem; }
