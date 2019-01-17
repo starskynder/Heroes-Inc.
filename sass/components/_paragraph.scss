@@ -1,0 +1,11 @@
+.paragraph {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 2rem 0;
+  font-size: 2rem;
+
+  &--accent {
+    font-weight: 600;
+    color: $color-secondary;
+  }
+}

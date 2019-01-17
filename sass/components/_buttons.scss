@@ -1,0 +1,17 @@
+.learn-more {
+  border: 2px solid #fff;
+  color: inherit;
+  border-bottom: 1px solid inherit;
+  font-size: 2rem;
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 5px;
+  font-family: inherit;
+  display: block;
+  margin: 2rem;
+
+  &--dark {
+    border-color: #000;
+    color: #000;
+  }
+}
