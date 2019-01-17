@@ -1,0 +1,32 @@
+.about {
+  padding: 9rem 2rem;
+}
+
+.features {
+  background-color: darken($color-primary, 20);
+
+  &__box {
+    @include flex-col;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem 2rem;
+    color: #fff;
+
+    &--tertiary {
+      background-color: $color-tertiary;
+      color: #000;
+    }
+
+    &--secondary {
+      background-color: darken($color-secondary, 20);
+    }
+  }
+
+  &__img {
+    width: 100px;
+    display: block;
+    text-align: center;
+    margin: 2rem;
+  }
+}
