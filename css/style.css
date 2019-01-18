@@ -212,12 +212,14 @@ img {
     left: 50%;
     transform: translate(-50%, -50%); }
 
+/* ------ABOUT SECTION------ */
 .about {
   display: flex;
   flex-flow: column wrap;
   padding: 9rem 2rem;
   align-items: center; }
 
+/* ------FEATURES SECTION------ */
 .features {
   background-color: #ba160a; }
   .features__box {
@@ -238,15 +240,12 @@ img {
     text-align: center;
     margin: 2rem; }
 
+/* ------PRICING SECTION------ */
 .pricing {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding: 9rem 2rem;
-  /* &__content {
-    @include flex-col;
-    justify-content: space-between;
-  } */ }
+  padding: 9rem 2rem; }
   .pricing__card {
     display: flex;
     flex-flow: column wrap;
@@ -335,6 +334,7 @@ img {
     .pricing__buy--3 {
       background-image: linear-gradient(to bottom, #f5776e, #f12314); }
 
+/* ------TESTIMONIALS SECTION------ */
 .testimonials {
   padding: 2rem;
   background-color: #e2be1d;
