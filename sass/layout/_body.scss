@@ -33,8 +33,6 @@
 
 .pricing {
   @include flex-row-wrap;
-  align-items: space-between;
-  justify-content: stretch;
 
   padding: 9rem 2rem;
 
@@ -182,6 +180,58 @@
         $color-primary-light,
         $color-primary-dark
       );
+    }
+  }
+}
+.testimonials {
+  padding: 2rem;
+  background-color: $color-tertiary-dark;
+  @include flex-row-wrap;
+  align-items: stretch;
+  &__heading {
+    flex: 100%;
+    margin: 10rem 0;
+    text-align: center;
+  }
+  &__box {
+    flex: 100%;
+    background-color: $color-tertiary;
+    margin-bottom: 2rem;
+  }
+  &__content {
+    @include flex-col;
+    align-items: center;
+    align-items: center;
+    padding: 0.8rem;
+    margin: 5rem 0;
+    position: relative;
+  }
+  &__text {
+    &::before {
+      content: "”";
+      color: #fff;
+      font-size: 20rem;
+      line-height: 0;
+      display: inline-block;
+      position: absolute;
+      top: 6.5rem;
+      left: 2rem;
+    }
+  }
+  &__img {
+    width: 10rem;
+    display: block;
+    margin: 1rem;
+  }
+  &__name {
+    display: block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    font-weight: 600;
+    &::before,
+    &::after {
+      content: " — ";
     }
   }
 }

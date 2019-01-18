@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -237,8 +238,6 @@ img {
 .pricing {
   display: flex;
   flex-flow: row wrap;
-  align-items: space-between;
-  justify-content: stretch;
   padding: 9rem 2rem;
   /* &__content {
     @include flex-col;
@@ -329,3 +328,47 @@ img {
       background-image: linear-gradient(to bottom, #fde680, #e2be1d); }
     .pricing__buy--3 {
       background-image: linear-gradient(to bottom, #f5776e, #f12314); }
+
+.testimonials {
+  padding: 2rem;
+  background-color: #e2be1d;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch; }
+  .testimonials__heading {
+    flex: 100%;
+    margin: 10rem 0;
+    text-align: center; }
+  .testimonials__box {
+    flex: 100%;
+    background-color: #fdd835;
+    margin-bottom: 2rem; }
+  .testimonials__content {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-items: center;
+    padding: 0.8rem;
+    margin: 5rem 0;
+    position: relative; }
+  .testimonials__text::before {
+    content: "”";
+    color: #fff;
+    font-size: 20rem;
+    line-height: 0;
+    display: inline-block;
+    position: absolute;
+    top: 6.5rem;
+    left: 2rem; }
+  .testimonials__img {
+    width: 10rem;
+    display: block;
+    margin: 1rem; }
+  .testimonials__name {
+    display: block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    font-weight: 600; }
+    .testimonials__name::before, .testimonials__name::after {
+      content: " — "; }
