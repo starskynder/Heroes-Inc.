@@ -294,7 +294,8 @@ img {
     display: block;
     margin: 2rem; }
     .pricing__heading--main {
-      flex: 100%; }
+      flex: 100%;
+      margin: 4rem 2rem; }
     .pricing__heading--1 {
       color: #115794; }
     .pricing__heading--2 {
