@@ -4,11 +4,25 @@
 
   padding: 9rem 2rem;
   align-items: center;
+  background-image: url(../img/natural-paper.png);
+
+  @media screen and (min-width: $bp-medium) {
+    padding: 20rem 0;
+    background-attachment: fixed;
+    background-position: center;
+  }
 }
 
 /* ------FEATURES SECTION------ */
 .features {
-  background-color: darken($color-primary, 20);
+  @include flex-row-wrap;
+
+  justify-content: center;
+  background-color: lighten($color-secondary, 45);
+
+  @media screen and (min-width: $bp-medium) {
+    padding: 20rem 0;
+  }
 
   &__box {
     @include flex-col;
@@ -17,6 +31,25 @@
     justify-content: space-between;
     padding: 6rem 2rem;
     color: #fff;
+
+    @media screen and (min-width: $bp-smallest) {
+      flex: 45%;
+
+      max-width: 50rem;
+    }
+
+    @media screen and (min-width: $bp-medium) {
+      flex: 30%;
+      margin: 2rem;
+    }
+
+    @media screen and (min-width: $bp-large) {
+      flex: 30%;
+    }
+
+    &--primary {
+      background-color: darken($color-primary, 20);
+    }
 
     &--tertiary {
       background-color: $color-tertiary;
@@ -52,7 +85,11 @@
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 3rem;
+    background-color: #fff;
 
+    @media screen and (min-width: $bp-small) {
+      margin: 4rem;
+    }
     &--1 {
       border: 2px solid $color-secondary;
     }
@@ -67,7 +104,7 @@
 
     &:hover {
       transform: translateY(-6px);
-      box-shadow: 0 6px 6px rgba($color-grey, 0.7);
+      box-shadow: 0 0 16px rgba($color-grey, 0.7);
     }
   }
 
@@ -196,6 +233,13 @@
   background-color: $color-tertiary-dark;
   @include flex-row-wrap;
   align-items: stretch;
+  justify-content: center;
+  @media screen and (min-width: $bp-medium) {
+    padding: 8rem 2rem;
+  }
+  @media screen and (min-width: $bp-large) {
+    padding: 10rem 2rem;
+  }
   &__heading {
     flex: 100%;
     margin: 10rem 0;
@@ -205,6 +249,20 @@
     flex: 100%;
     background-color: $color-tertiary;
     margin-bottom: 2rem;
+    @media screen and (min-width: $bp-small) {
+      flex: 43%;
+      margin: 1rem;
+    }
+    @media screen and (min-width: $bp-small) {
+      flex: 43%;
+    }
+    @media screen and (min-width: $bp-medium) {
+      flex: 30%;
+      max-width: 33rem;
+    }
+    @media screen and (min-width: $bp-large) {
+      flex: 20%;
+    }
   }
   &__content {
     @include flex-col;

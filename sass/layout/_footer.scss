@@ -3,12 +3,37 @@
   color: #fff;
   padding: 6rem 3rem;
 
+  @media screen and (min-width: $bp-small) {
+    @include flex-row-wrap;
+  }
+
   &__box {
     @include flex-col;
 
     color: #fff;
     padding: 2rem;
     font-size: 1.7rem;
+
+    @media screen and (min-width: $bp-small) {
+      flex: 43%;
+      border: 1px dotted #fff;
+      margin: 1rem;
+    }
+
+    @media screen and (min-width: $bp-medium) {
+      flex: 30%;
+      margin: 4rem;
+    }
+
+    @media screen and (min-width: $bp-medium) {
+      flex: 30%;
+      margin: 4rem;
+    }
+
+    @media screen and (min-width: $bp-large) {
+      flex: 24%;
+      margin: 4rem;
+    }
   }
 
   &__box:not(:last-of-type) {
@@ -62,12 +87,23 @@
     }
   }
 
+  &__contacts,
+  &__social {
+    @media screen and (min-width: $bp-large) {
+      @include flex-col;
+
+      align-items: center;
+      flex: 1;
+    }
+  }
+
   &__input,
   &__submit {
     background-color: #fff;
     border: none;
     padding: 1rem;
     border-radius: 5px;
+    margin-top: 6rem;
   }
 
   &__credits {

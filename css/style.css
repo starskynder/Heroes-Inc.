@@ -42,12 +42,18 @@ img {
   backface-visibility: hidden;
   animation: moveInLeft 1s ease-out;
   font-size: 3.5rem; }
+  @media screen and (min-width: 62.5em) {
+    .heading-primary {
+      font-size: 4rem; } }
   .heading-primary--sub {
     border-left: 2px solid #fdd835;
     padding: 0.5rem;
     animation: moveInRight 1s ease-out;
     transition: all 0.2s;
     font-size: 2rem; }
+    @media screen and (min-width: 62.5em) {
+      .heading-primary--sub {
+        font-size: 3rem; } }
     .heading-primary--sub:hover {
       padding-left: 1rem; }
   .heading-primary__link {
@@ -206,6 +212,12 @@ img {
   background-size: cover;
   background-image: url(../img/hero-background.jpg);
   position: relative; }
+  @media screen and (min-width: 62.5em) {
+    .header {
+      padding: 20rem 0;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat; } }
   .header__text {
     position: absolute;
     top: 50%;
@@ -217,11 +229,23 @@ img {
   display: flex;
   flex-flow: column wrap;
   padding: 9rem 2rem;
-  align-items: center; }
+  align-items: center;
+  background-image: url(../img/natural-paper.png); }
+  @media screen and (min-width: 62.5em) {
+    .about {
+      padding: 20rem 0;
+      background-attachment: fixed;
+      background-position: center; } }
 
 /* ------FEATURES SECTION------ */
 .features {
-  background-color: #ba160a; }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: #ecf5fd; }
+  @media screen and (min-width: 62.5em) {
+    .features {
+      padding: 20rem 0; } }
   .features__box {
     display: flex;
     flex-flow: column wrap;
@@ -229,6 +253,19 @@ img {
     justify-content: space-between;
     padding: 6rem 2rem;
     color: #fff; }
+    @media screen and (min-width: 40.625em) {
+      .features__box {
+        flex: 45%;
+        max-width: 50rem; } }
+    @media screen and (min-width: 62.5em) {
+      .features__box {
+        flex: 30%;
+        margin: 2rem; } }
+    @media screen and (min-width: 75em) {
+      .features__box {
+        flex: 30%; } }
+    .features__box--primary {
+      background-color: #ba160a; }
     .features__box--tertiary {
       background-color: #fdd835;
       color: #000; }
@@ -254,7 +291,11 @@ img {
     max-width: 40rem;
     border-radius: 5px;
     overflow: hidden;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    background-color: #fff; }
+    @media screen and (min-width: 43.75em) {
+      .pricing__card {
+        margin: 4rem; } }
     .pricing__card--1 {
       border: 2px solid #1e88e5; }
     .pricing__card--2 {
@@ -263,7 +304,7 @@ img {
       border: 2px solid #f12314; }
     .pricing__card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 6px 6px rgba(128, 128, 128, 0.7); }
+      box-shadow: 0 0 16px rgba(128, 128, 128, 0.7); }
   .pricing__picture {
     height: 25rem;
     display: block;
@@ -341,7 +382,14 @@ img {
   background-color: #e2be1d;
   display: flex;
   flex-flow: row wrap;
-  align-items: stretch; }
+  align-items: stretch;
+  justify-content: center; }
+  @media screen and (min-width: 62.5em) {
+    .testimonials {
+      padding: 8rem 2rem; } }
+  @media screen and (min-width: 75em) {
+    .testimonials {
+      padding: 10rem 2rem; } }
   .testimonials__heading {
     flex: 100%;
     margin: 10rem 0;
@@ -350,6 +398,20 @@ img {
     flex: 100%;
     background-color: #fdd835;
     margin-bottom: 2rem; }
+    @media screen and (min-width: 43.75em) {
+      .testimonials__box {
+        flex: 43%;
+        margin: 1rem; } }
+    @media screen and (min-width: 43.75em) {
+      .testimonials__box {
+        flex: 43%; } }
+    @media screen and (min-width: 62.5em) {
+      .testimonials__box {
+        flex: 30%;
+        max-width: 33rem; } }
+    @media screen and (min-width: 75em) {
+      .testimonials__box {
+        flex: 20%; } }
   .testimonials__content {
     display: flex;
     flex-flow: column wrap;
@@ -384,12 +446,33 @@ img {
   background-color: #115794;
   color: #fff;
   padding: 6rem 3rem; }
+  @media screen and (min-width: 43.75em) {
+    .footer {
+      display: flex;
+      flex-flow: row wrap; } }
   .footer__box {
     display: flex;
     flex-flow: column wrap;
     color: #fff;
     padding: 2rem;
     font-size: 1.7rem; }
+    @media screen and (min-width: 43.75em) {
+      .footer__box {
+        flex: 43%;
+        border: 1px dotted #fff;
+        margin: 1rem; } }
+    @media screen and (min-width: 62.5em) {
+      .footer__box {
+        flex: 30%;
+        margin: 4rem; } }
+    @media screen and (min-width: 62.5em) {
+      .footer__box {
+        flex: 30%;
+        margin: 4rem; } }
+    @media screen and (min-width: 75em) {
+      .footer__box {
+        flex: 24%;
+        margin: 4rem; } }
   .footer__box:not(:last-of-type) {
     margin-bottom: 4rem; }
   .footer__logo {
@@ -421,10 +504,17 @@ img {
       transform: translateX(5px); }
     .footer__link--credits {
       text-decoration: underline; }
+  @media screen and (min-width: 75em) {
+    .footer__contacts, .footer__social {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      flex: 1; } }
   .footer__input, .footer__submit {
     background-color: #fff;
     border: none;
     padding: 1rem;
-    border-radius: 5px; }
+    border-radius: 5px;
+    margin-top: 6rem; }
   .footer__credits {
     background-color: #115794; }
