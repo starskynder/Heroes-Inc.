@@ -183,7 +183,7 @@ img {
     transition: all 0.3s;
     width: 80vw;
     height: 100vh;
-    background-image: linear-gradient(to bottom, #f44336 0 33%, #fdd835 33% 66%, #1e88e5 66% 100%); }
+    background-image: linear-gradient(to bottom, #f44336 0 25%, #fdd835 25% 77%, #1e88e5 77% 100%); }
   .navigation__checkbox:checked ~ nav {
     left: 0; }
   .navigation__item {
@@ -238,6 +238,7 @@ img {
 .pricing {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   padding: 9rem 2rem;
   /* &__content {
     @include flex-col;
@@ -290,6 +291,8 @@ img {
     font-weight: 700;
     display: block;
     margin: 2rem; }
+    .pricing__heading--main {
+      flex: 100%; }
     .pricing__heading--1 {
       color: #115794; }
     .pricing__heading--2 {
@@ -372,3 +375,52 @@ img {
     font-weight: 600; }
     .testimonials__name::before, .testimonials__name::after {
       content: " — "; }
+
+.footer {
+  background-color: #115794;
+  color: #fff;
+  padding: 6rem 3rem; }
+  .footer__box {
+    display: flex;
+    flex-flow: column wrap;
+    color: #fff;
+    padding: 2rem;
+    font-size: 1.7rem; }
+  .footer__box:not(:last-of-type) {
+    margin-bottom: 4rem; }
+  .footer__logo {
+    display: block;
+    width: 8rem;
+    margin: 1rem; }
+  .footer__social--img {
+    display: inline-block;
+    width: 4rem;
+    margin: 2rem 1rem;
+    transition: all 0.2s; }
+    .footer__social--img:hover {
+      transform: translateY(-5px); }
+  .footer__list {
+    padding: 1rem;
+    list-style-type: square; }
+  .footer__item {
+    border-bottom: 1px dotted #fff;
+    padding: 1rem 0; }
+  .footer__link {
+    font-size: 1.7rem;
+    display: inline-block;
+    transition: all 0.2s;
+    text-decoration: none; }
+    .footer__link:link, .footer__link:visited {
+      color: #fff; }
+    .footer__link:focus, .footer__link:hover {
+      color: #fde680;
+      transform: translateX(5px); }
+    .footer__link--credits {
+      text-decoration: underline; }
+  .footer__input, .footer__submit {
+    background-color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px; }
+  .footer__credits {
+    background-color: #115794; }
