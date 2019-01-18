@@ -33,6 +33,7 @@
 
 .pricing {
   @include flex-row-wrap;
+  justify-content: center;
 
   padding: 9rem 2rem;
 
@@ -115,6 +116,9 @@
     border-bottom: 1px dotted $color-grey;
   }
   &__heading {
+    &--main {
+      flex: 100%;
+    }
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
