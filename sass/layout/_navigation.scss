@@ -91,9 +91,9 @@
     height: 100vh;
     background-image: linear-gradient(
       to bottom,
-      $color-primary 0 33%,
-      $color-tertiary 33% 66%,
-      $color-secondary 66% 100%
+      $color-primary 0 25%,
+      $color-tertiary 25% 77%,
+      $color-secondary 77% 100%
     );
   }
   &__checkbox:checked ~ nav {
