@@ -213,7 +213,10 @@ img {
     transform: translate(-50%, -50%); }
 
 .about {
-  padding: 9rem 2rem; }
+  display: flex;
+  flex-flow: column wrap;
+  padding: 9rem 2rem;
+  align-items: center; }
 
 .features {
   background-color: #ba160a; }

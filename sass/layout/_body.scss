@@ -1,5 +1,8 @@
 .about {
+  @include flex-col;
+
   padding: 9rem 2rem;
+  align-items: center;
 }
 
 .features {
