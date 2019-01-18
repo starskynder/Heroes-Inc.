@@ -1,0 +1,76 @@
+.footer {
+  background-color: $color-secondary-dark;
+  color: #fff;
+  padding: 6rem 3rem;
+
+  &__box {
+    @include flex-col;
+
+    color: #fff;
+    padding: 2rem;
+    font-size: 1.7rem;
+  }
+
+  &__box:not(:last-of-type) {
+    margin-bottom: 4rem;
+  }
+
+  &__logo {
+    display: block;
+    width: 8rem;
+    margin: 1rem;
+  }
+
+  &__social--img {
+    display: inline-block;
+    width: 4rem;
+    margin: 2rem 1rem;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  &__list {
+    padding: 1rem;
+    list-style-type: square;
+  }
+
+  &__item {
+    border-bottom: 1px dotted #fff;
+    padding: 1rem 0;
+  }
+
+  &__link {
+    font-size: 1.7rem;
+    display: inline-block;
+    transition: all 0.2s;
+    text-decoration: none;
+    &:link,
+    &:visited {
+      color: #fff;
+    }
+    &:focus,
+    &:hover {
+      color: $color-tertiary-light;
+      transform: translateX(5px);
+    }
+
+    &--credits {
+      text-decoration: underline;
+    }
+  }
+
+  &__input,
+  &__submit {
+    background-color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  &__credits {
+    background-color: $color-secondary-dark;
+  }
+}
