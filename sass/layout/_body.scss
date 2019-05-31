@@ -34,7 +34,6 @@
 
     @media screen and (min-width: $bp-smallest) {
       flex: 45%;
-
       max-width: 50rem;
     }
 
@@ -90,6 +89,7 @@
     @media screen and (min-width: $bp-small) {
       margin: 4rem;
     }
+
     &--1 {
       border: 2px solid $color-secondary;
     }
@@ -125,6 +125,7 @@
         ),
         url(../img/standard2.jpg);
     }
+
     &--2 {
       background-image: linear-gradient(
           to right bottom,
@@ -133,6 +134,7 @@
         ),
         url(../img/wonder.jpg);
     }
+
     &--3 {
       background-image: linear-gradient(
           to right bottom,
@@ -142,43 +144,53 @@
         url(../img/super.jpg);
     }
   }
+
   &__list {
     list-style-type: none;
     font-size: 2rem;
     background-color: #fff;
     padding: 2rem;
   }
+
   &__item {
     margin: 1rem 0;
   }
+
   &__item:not(:last-of-type) {
     border-bottom: 1px dotted $color-grey;
   }
+
   &__heading {
     &--main {
       flex: 100%;
       margin: 4rem 2rem;
     }
+
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
     display: block;
     margin: 2rem;
+
     &--1 {
       color: $color-secondary-dark;
     }
+
     &--2 {
       color: $color-tertiary-dark;
     }
+
     &--3 {
       color: $color-primary-dark;
     }
+
     &--sub {
       font-style: italic;
       font-size: 1.5rem;
       display: block;
       color: inherit;
     }
+
     &--price {
       font-weight: 500;
       text-align: center;
@@ -189,21 +201,26 @@
       &--1 {
         background-color: $color-secondary;
       }
+
       &--2 {
         background-color: $color-tertiary;
         color: #000;
       }
+
       &--3 {
         background-color: $color-primary;
       }
     }
   }
+
   &__buy {
     @include flex-col;
+
     height: 10rem;
     align-items: center;
     justify-content: center;
     margin-top: auto;
+
     &--1 {
       background-image: linear-gradient(
         to bottom,
@@ -211,6 +228,7 @@
         $color-secondary-dark
       );
     }
+
     &--2 {
       background-image: linear-gradient(
         to bottom,
@@ -231,39 +249,50 @@
 .testimonials {
   padding: 2rem;
   background-color: $color-tertiary-dark;
+
   @include flex-row-wrap;
+
   align-items: stretch;
   justify-content: center;
+
   @media screen and (min-width: $bp-medium) {
     padding: 8rem 2rem;
   }
+
   @media screen and (min-width: $bp-large) {
     padding: 10rem 2rem;
   }
+
   &__heading {
     flex: 100%;
     margin: 10rem 0;
     text-align: center;
   }
+
   &__box {
     flex: 100%;
     background-color: $color-tertiary;
     margin-bottom: 2rem;
+
     @media screen and (min-width: $bp-small) {
       flex: 43%;
       margin: 1rem;
     }
+
     @media screen and (min-width: $bp-small) {
       flex: 43%;
     }
+
     @media screen and (min-width: $bp-medium) {
       flex: 30%;
       max-width: 33rem;
     }
+
     @media screen and (min-width: $bp-large) {
       flex: 20%;
     }
   }
+
   &__content {
     @include flex-col;
     align-items: center;
@@ -272,6 +301,7 @@
     margin: 5rem 0;
     position: relative;
   }
+
   &__text {
     &::before {
       content: "”";
@@ -284,11 +314,13 @@
       left: 2rem;
     }
   }
+
   &__img {
     width: 10rem;
     display: block;
     margin: 1rem;
   }
+
   &__name {
     display: block;
     font-size: 2rem;
